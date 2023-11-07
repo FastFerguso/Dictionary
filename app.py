@@ -10,8 +10,8 @@ from bson import ObjectId
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
-MONGODB_URI = os.environ.get("mongodb+srv://test:sparta@cluster0.gz7pp7h.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp")
-DB_NAME =  os.environ.get("plus_week2")
+MONGODB_URI = os.environ.get("MONGODB_URI")
+DB_NAME =  os.environ.get("DB_NAME")
 
 client = MongoClient(MONGODB_URI)
 db = client[DB_NAME]

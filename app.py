@@ -2,13 +2,12 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for
 from pymongo import MongoClient
 from datetime import datetime
 import requests
-import ssl
 from bson import ObjectId
 
 
 app = Flask(__name__)
 
-client = MongoClient('mongodb+srv://test:sparta@cluster0.gz7pp7h.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp', ssl_cert_reqs=ssl.CERT_NONE)
+client = MongoClient('mongodb+srv://test:sparta@cluster0.gz7pp7h.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp')
 db = client.dbsparta_plus_week2
 
 
